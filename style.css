@@ -1,0 +1,1157 @@
+@charset "utf-8";
+
+/*=======================================================================
+common
+=======================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+@font-face {
+  font-family: "myfont1";
+  src: url("app.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("Juliette-Regular.otf") format("opentype");
+}
+
+
+
+/*=======================================================================
+fv
+=======================================================================*/
+main {
+  overflow: hidden;
+}
+
+main .fv {
+  width: 100%;
+  height: 100vh;
+  max-height: 960px;
+  background: #FFFFFF;
+  overflow: hidden;
+  position: relative;  
+}
+
+main .fv .fv-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+main .fv .fv0 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 486px;
+  height: 960px;
+  background: rgba(255, 255, 255, .8);
+  z-index: 2;
+}
+
+main .fv .fv1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .fv .fv2 {
+  position: absolute;
+  top: calc(50% - 220px);
+  left: calc(50% - 380px);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  animation: anime1 1.3s forwards;
+}
+
+@keyframes anime1 {
+  0% {
+    opacity: 0;
+    top: calc(50% - 220px);
+    left: calc(50% - 580px);
+  }
+  100% {
+    opacity: 1;
+    top: calc(50% - 220px);
+    left: calc(50% - 380px);
+  }
+}
+
+main .fv .fv3 {
+  position: absolute;
+  top: calc(50% + 160px);
+  left: calc(50% + 460px);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  animation: anime2 1.3s .8s forwards;
+}
+
+@keyframes anime2 {
+  0% {
+    opacity: 0;
+    top: calc(50% + 160px);
+    left: calc(50% + 660px);
+  }
+  100% {
+    opacity: 1;
+    top: calc(50% + 160px);
+    left: calc(50% + 460px);
+  }
+}
+
+main .fv .fv4 {
+  position: absolute;
+  width: 260px;
+  height: 168px;
+  top: calc(50% + 140px);
+  left: calc(50% - 540px);
+  transform: translate(-50%, -50%);
+  background: #19196f;
+  z-index: 3;
+  opacity: 0;
+  animation: anime3 3s forwards;
+}
+
+@keyframes anime3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main .fv .fv5 {
+  position: absolute;
+  width: 260px;
+  height: 168px;
+  top: calc(50% - 420px);
+  left: calc(50% + 680px);
+  transform: translate(-50%, -50%);
+  background: #19196f;
+  z-index: 3;
+  opacity: 0;
+  animation: anime4 3s forwards;
+}
+
+@keyframes anime4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  main .fv .fv-logo {
+    width: 360px;
+  }
+  
+  main .fv .fv2 {
+    top: calc(50% - 160px);
+    left: calc(50% - 340px);
+    width: 400px;
+  }
+  
+  main .fv .fv3 {
+    top: calc(50% + 170px);
+    left: calc(50% + 360px);
+    width: 420px;
+  }
+  
+  main .fv .fv4 {
+    width: 220px;
+    height: 148px;
+    top: calc(50% + 140px);
+    left: calc(50% - 430px);
+  }
+  
+  main .fv .fv5 {
+    width: 220px;
+    height: 148px;
+    top: calc(50% - 360px);
+    left: calc(50% + 550px);
+  }
+}
+
+@media screen and (max-width:824px) {
+  main .fv .fv2 {
+    top: calc(50% - 170px);
+    left: calc(50% - 200px);
+    width: 320px;
+  }
+  
+  main .fv .fv3 {
+    top: calc(50% + 190px);
+    left: calc(50% + 240px);
+    width: 340px;
+  }
+  
+  main .fv .fv4 {
+    width: 220px;
+    height: 148px;
+    top: calc(50% + 140px);
+    left: calc(50% - 340px);
+  }
+  
+  main .fv .fv5 {
+    width: 220px;
+    height: 148px;
+    top: calc(50% - 360px);
+    left: calc(50% + 420px);
+  }
+}
+
+@media screen and (max-width:767px) {
+  main .fv .fv-logo {
+    width: 280px;
+  }
+
+  main .fv .fv2 {
+    display: none;
+  }
+  
+  main .fv .fv3 {
+    display: none;
+  }
+
+  main .fv .fv4 {
+    display: none;
+  }
+  
+  main .fv .fv5 {
+    display: none;
+  }
+}
+
+
+/*=======================================================================
+concept
+=======================================================================*/
+main .concept {
+  background-image: url(concept.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, .4);
+  padding: 120px 0 200px;
+}
+
+main .concept div {
+  margin-inline: auto;
+  max-width: calc(100% - 40px);
+  text-align: center;
+}
+
+main .concept div h2 {
+  font-size: 2.75rem;
+  font-weight: normal;
+  font-family: 'myfont2';
+  color: #b7a50e;
+}
+
+main .concept div .concept-title {
+  font-size: 3.25rem;
+  font-weight: normal;
+  font-family: 'myfont1';
+  margin-top: 80px;
+}
+
+main .concept div .concept-text {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'myfont1';
+  margin-top: 60px;
+}
+
+@media screen and (max-width:1024px) {
+  main .concept div h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+  }
+  
+  main .concept div .concept-title {
+    font-size: 3rem;
+  }
+  
+  main .concept div .concept-text {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width:824px) {
+  main .concept div h2 {
+    font-size: 2.25rem;
+  }
+
+  main .concept div .concept-title {
+    font-size: 2.75rem;
+  }
+
+  main .concept div .concept-text {
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  main .concept div h2 {
+    font-size: 2rem;
+  }
+
+  main .concept div .concept-title {
+    font-size: 1.5rem;
+  }
+
+  main .concept div .concept-text {
+    font-size: 1.125rem;
+    margin-top: 40px;
+  }
+}
+
+
+/*=======================================================================
+about
+=======================================================================*/
+  main .aboutus {
+    background: #f6f6f6;
+    padding: 160px 0 200px;
+  }
+  
+  main .aboutus>div {
+    margin-inline: auto;
+    max-width: 1200px;
+  }
+  
+  main .aboutus div h2 {
+    font-size: 2.75rem;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'myfont2';
+    color: #b7a50e;
+  }
+  
+  main .aboutus>div>p {
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'myfont1';
+    margin-top: -20px;
+  }
+  
+  main .aboutus div .aboutus-contents {
+    margin-top: 100px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1,
+  main .aboutus div .aboutus-contents .aboutus-content2,
+  main .aboutus div .aboutus-contents .aboutus-content3 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2,
+  main .aboutus div .aboutus-contents .aboutus-content3 {
+    margin-top: 40px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1,
+  main .aboutus div .aboutus-contents .aboutus-content3 {
+    flex-direction: row-reverse;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 {
+    transform: translateX(80px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-img {
+    max-width: 514px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-img img {
+    width: 100%;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text h4 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'myfont1';
+    margin-top: 40px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text p {
+    font-size: 1.25rem;
+    line-height: 2;
+    font-family: 'myfont1';
+    margin-top: 40px;
+    width: calc(100%);
+    margin-inline: auto;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 {
+    margin-bottom: -340px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about2 {
+    max-width: 560px;
+    transform: translate(-80px, 0);
+    z-index: 3;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about3 {
+    max-width: 320px;
+    transform: translate(-160px, -80px);
+    z-index: 2;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about4 {
+    max-width: 360px;
+    transform: translate(180px, -400px);
+    z-index: 1;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text h4 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'myfont1';
+    margin-top: 80px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p {
+    font-size: 1.25rem;
+    line-height: 2;
+    font-family: 'myfont1';
+    margin-top: 40px;
+    width: calc(100%);
+    margin-inline: auto;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p span {
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-family: 'myfont1';
+    line-height: 2;
+    white-space: nowrap;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div {
+    width: 180px;
+    height: 40px;
+    background: #19196f;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div:hover {
+    opacity: .7;
+    scale: 1.1;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div a {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'myfont1';
+    line-height: 40px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img {
+    position: relative;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about6 {
+    position: absolute;
+    left: 50px;
+    top: -40px;
+    width: 111px;
+    z-index: 3;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about5 {
+    max-width: 595px;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about-back {
+    max-width: 595px;
+    width: 595;
+    height: 397px;
+    aspect-ratio: 595/397;
+    background: #19196f;
+    transform: translate(40px, 40px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text h4 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'myfont1';
+    margin-top: 60px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text p {
+    font-size: 1.25rem;
+    font-family: 'myfont1';
+    line-height: 2;
+    margin-top: 40px;
+    width: 380px;
+    margin-inline: auto;
+  }
+
+@media screen and (max-width:1024px) {
+  main .aboutus>div {
+    margin-inline: auto;
+    width: calc(100% - 40px);
+  }
+  
+  main .aboutus div h2 {
+    font-size: 2.5rem;
+  }
+  
+  main .aboutus>div>p {
+    font-size: 1.125rem;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1,
+  main .aboutus div .aboutus-contents .aboutus-content2,
+  main .aboutus div .aboutus-contents .aboutus-content3 {
+    gap: 20px;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content1 {
+    transform: translateX(0px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-img {
+    min-width: 354px;
+    max-width: 400px;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text {
+    min-width: 354px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text h4 {
+    font-size: 1.5rem;
+    margin-top: 0px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text p {
+    font-size: 1.125rem;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 {
+    margin-bottom: -220px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about2 {
+    max-width: 440px;
+    transform: translate(-40px, 0);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about3 {
+    max-width: 220px;
+    transform: translate(-60px, -40px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about4 {
+    max-width: 260px;
+    transform: translate(180px, -270px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text h4 {
+    font-size: 1.5rem;
+    margin-top: 80px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p {
+    font-size: 1.125rem;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p span {
+    font-size: 1.125rem;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div {
+    width: 140px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div a {
+    font-size: 1.125rem;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about6 {
+    left: 40px;
+    top: -40px;
+    width: 77px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about5 {
+    width: 400px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about-back {
+    width: 400;
+    height: 267px;
+    transform: translate(40px, 40px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text h4 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text p {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width:824px) {
+  main .aboutus>div {
+    margin-inline: auto;
+    width: calc(100% - 40px);
+  }
+  
+  main .aboutus div h2 {
+    font-size: 2.25rem;
+  }
+  
+  main .aboutus>div>p {
+    font-size: 1rem;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-img {
+    width: calc((100% / 2) - 20px);
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text {
+    width: calc((100% / 2) - 20px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text h4 {
+    font-size: 1.25rem;
+    margin-top: 0px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text p {
+    font-size: 1rem;
+    width: 350px;
+    margin-inline: auto;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 {
+    margin-bottom: -170px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about2 {
+    max-width: 360px;
+    transform: translate(0px, 0);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about3 {
+    max-width: 180px;
+    transform: translate(-20px, -20px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about4 {
+    max-width: 200px;
+    transform: translate(170px, -225px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text h4 {
+    font-size: 1.25rem;
+    margin-top: 80px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p {
+    font-size: 1rem;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p span {
+    font-size: 1rem;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div {
+    width: 140px;
+    height: 30px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div a {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about6 {
+    left: 20px;
+    top: -20px;
+    width: 55px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about5 {
+    width: 320px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about-back {
+    width: 320;
+    height: 214px;
+    transform: translate(40px, 40px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text h4 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text p {
+    font-size: 1rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  main .aboutus div h2 {
+    font-size: 2rem;
+  }
+  
+  main .aboutus>div>p {
+    font-size: 1rem;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content1,
+  main .aboutus div .aboutus-contents .aboutus-content2,
+  main .aboutus div .aboutus-contents .aboutus-content3 {
+    display: block;
+    width: 100%;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content1 {
+    margin-top: 60px;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2,
+  main .aboutus div .aboutus-contents .aboutus-content3 {
+    margin-top: 60px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-img {
+    width: calc(100%);
+    max-width: 100%;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text {
+    width: calc(100%);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text h4 {
+    font-size: 1.25rem;
+    margin-top: 0px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text p {
+    font-size: 1rem;
+    width: 355px;
+    margin-inline: auto;
+    margin-top: 20px;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 {
+    margin-bottom: 0px;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about2 {
+    max-width: none;
+    width: 100%;
+    transform: translate(0px, 0px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about3 {
+    width: calc((100% - 10px) / 2);
+    max-width: calc((100% - 10px) / 2);
+    transform: translate(0px, 0px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-img .about4 {
+    width: calc((100% - 10px) / 2);
+    max-width: calc((100% - 10px) / 2);
+    object-fit: contain;
+    transform: translate(0px, 0px);
+    align-self: self-start;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text h4 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p {
+    font-size: 1rem;
+    width: 340px;
+    margin-inline: auto;
+    margin-top: 20px;
+  }
+
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text p span {
+    font-size: 1rem;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div {
+    width: 120px;
+    height: 30px;
+    margin-inline: auto;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content2 .aboutus-text div a {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about5 {
+    max-width: 100%;
+    width: 100%;
+    transform: translate(-10px, -10px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-img .about-back {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 160/107;
+    transform: translate(10px, 10px);
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text h4 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+  }
+  
+  main .aboutus div .aboutus-contents .aboutus-content3 .aboutus-text p {
+    font-size: 1rem;
+    width: 310px;
+    margin-top: 20px;
+  }
+}
+
+/*=======================================================================
+contact
+=======================================================================*/
+main .contact {
+  position: relative;
+  padding: 120px 0 200px;
+}
+
+main .contact h2 {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: normal;
+  font-family: 'myfont2';
+  color: #b7a50e;
+}
+
+main .contact .contact-text {
+  max-width: 800px;
+  background: #f6f6f6;
+  margin-inline: auto;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+main .contact .contact-text p:nth-child(1) {
+  font-size: 2rem;
+  font-family: 'myfont1';
+}
+
+main .contact .contact-text p:nth-child(2) {
+  font-size: 1.25rem;
+  margin-top: 40px;
+  font-family: 'myfont1';
+}
+
+main .contact .contact-text div {
+  width: 240px;
+  height: 40px;
+  border-radius: 20px;
+  background: #19196f;
+  color: #FFFFFF;
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+main .contact .contact-text div:hover {
+  opacity: .7;
+  scale: 1.1;
+}
+
+main .contact .contact-text div a {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  font-family: 'myfont1';
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:1024px) {
+  main .contact h2 {
+    font-size: 2.5rem;
+  }
+  
+  main .contact .contact-text {
+    margin-top: 40px;
+  }
+  
+  main .contact .contact-text p:nth-child(1) {
+    font-size: 1.5rem;
+  }
+  
+  main .contact .contact-text p:nth-child(2) {
+    font-size: 1.125rem;
+    margin-top: 20px;
+  }
+  
+  main .contact .contact-text div {
+    margin-top: 20px;
+  }
+  
+  main .contact .contact-text div a {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width:824px) {
+  main .contact h2 {
+    font-size: 2.25rem;
+  }
+  
+  main .contact .contact-text {
+    max-width: calc(100% - 100px);
+  }
+  
+  main .contact .contact-text p:nth-child(1) {
+    font-size: 1.25rem;
+  }
+  
+  main .contact .contact-text p:nth-child(2) {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+  
+  main .contact .contact-text div {
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+  }
+  
+  main .contact .contact-text div a {
+    line-height: 30px;
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  main .contact h2 {
+    font-size: 2rem;
+  }
+  
+  main .contact .contact-text {
+    max-width: calc(100% - 40px);
+  }
+}
+
+/*=======================================================================
+footer
+=======================================================================*/
+footer {
+  background: #19196f;
+  color: #FFFFFF;
+  padding: 120px 0 40px;
+}
+
+footer .footer-menu{
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+footer .footer-logo {
+  width: 250px;
+  height: 172px;
+}
+
+footer .footer-logo img {
+  width: 100%;
+}
+
+footer .footer-menu .footer-address p {
+  font-size: 1.5rem;
+  font-family: 'myfont1';
+}
+
+footer .footer-menu .footer-address p:nth-child(2) {
+  margin-top: 8px;
+}
+
+footer .footer-menu .footer-address div {
+ margin-top: 40px;
+ border: 3px solid #FFFFFF;
+ width: 230px;
+ height: 40px;
+ font-size: 1.25rem;
+ font-family: 'myfont1';
+ line-height: 36px;
+ text-align: center;
+ position: relative;
+}
+
+footer .footer-menu .footer-address div:hover {
+  scale: 1.1;
+  opacity: .7;
+}
+
+footer .footer-menu .footer-address div a {
+  width: 100%;
+  padding: 8px 0;
+}
+
+footer .footer-menu .footer-address div img {
+  transform: translate(-10px, -5px);
+}
+
+footer .footer-menu .footer-sns {
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-menu .footer-sns ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+footer .footer-menu .footer-sns ul li:hover {
+  scale: 1.1;
+  opacity: .7;
+}
+
+footer .footer-copy {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 1rem;
+  font-family: 'myfont1';
+}
+
+@media screen and (max-width:1024px) {  
+  footer .footer-menu{
+    gap: 40px;
+  }
+  
+  footer .footer-logo {
+    width: 200px;
+    height: 138px;
+  }
+  
+  footer .footer-menu .footer-address p {
+    font-size: 1.25rem;
+  }
+  
+  footer .footer-menu .footer-address div {
+   width: 200px;
+   font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width:824px) {
+  footer .footer-menu{
+    gap: 20px;
+  }
+  
+  footer .footer-menu .footer-address p {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  footer .footer-menu{
+    display: block;
+  }
+  
+  footer .footer-logo {
+    width: 150px;
+    height: 96px;
+    margin-inline: auto;
+  }
+  
+  footer .footer-menu .footer-address p {
+    font-size: 1rem;
+  }
+
+  footer .footer-menu .footer-address {
+    margin-top: 40px;
+    margin-inline: auto;
+    width: 335px;
+  }
+  
+  footer .footer-menu .footer-address div {
+   margin-top: 20px;
+   font-size: 1rem;
+  }
+
+  footer .footer-menu .footer-sns {
+    margin-top: 40px;
+    margin-inline: auto;
+    width: 130px;
+  }
+}
+
+/*=======================================================================
+タブレット　width:768px~960px 768px 768,744,810,834,820,1024
+=======================================================================*/
+/*=======================================================================
+スマホ　width:375px428px 390px max:440px 320,375,414,390,402,414,430
+=======================================================================*/

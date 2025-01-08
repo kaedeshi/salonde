@@ -273,7 +273,7 @@ main .concept div {
 
 main .concept div h2 {
   font-size: 2.75rem;
-  font-weight: normal;
+  font-weight: bold;
   font-family: 'myfont2';
   color: #b7a50e;
 }
@@ -403,6 +403,7 @@ about
   main .aboutus div .aboutus-contents .aboutus-content1 .aboutus-text h4 {
     font-size: 2rem;
     text-align: center;
+    font-weight: bold;
     font-family: 'myfont1';
     margin-top: 40px;
   }
@@ -447,6 +448,7 @@ about
     font-size: 2rem;
     text-align: center;
     font-family: 'myfont1';
+    font-weight: bold;
     margin-top: 80px;
   }
   
@@ -522,6 +524,7 @@ about
     font-size: 2rem;
     text-align: center;
     font-family: 'myfont1';
+    font-weight: bold;
     margin-top: 60px;
   }
   
@@ -904,6 +907,7 @@ main .contact .contact-text {
 main .contact .contact-text p:nth-child(1) {
   font-size: 2rem;
   font-family: 'myfont1';
+  font-weight: bold;
 }
 
 main .contact .contact-text p:nth-child(2) {

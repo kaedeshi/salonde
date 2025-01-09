@@ -267,7 +267,7 @@ main .concept {
 
 main .concept div {
   margin-inline: auto;
-  max-width: calc(100% - 40px);
+  max-width: calc(100%);
   text-align: center;
 }
 
